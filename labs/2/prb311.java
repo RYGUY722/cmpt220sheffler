@@ -9,11 +9,11 @@ public class prb311 {
 		int year=monin.nextInt();
 		int days=0; //Create variables for output
 		String monthname="";
-		if(month==2&&(year%4==0)) {
+		if(month==2&&(year%4==0)) { //If it's a leap year and February, do this
 			monthname="February";
 			days=29;
 		}
-		else { 
+		else {  //Otherwise, check for each month
 			switch(month) {
 			case 1:
 				monthname="January";
@@ -65,7 +65,7 @@ public class prb311 {
 				break;
 			}
 		}
-		System.out.println(monthname+" "+year+" has "+days+" days.");
+		System.out.println(monthname+" "+year+" has "+days+" days."); //Print the results
 	}
 
 }
