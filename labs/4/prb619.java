@@ -18,13 +18,13 @@ public class prb619 {
 		}
 	}
 	public static boolean isValid(double side1, double side2, double side3) { //Checks if the triangle is possible
-		if((side1+side2)>side3) {
+		if((side1+side2) <= side3) { // JA
 			return false;
 		}
-		if((side1+side3)>side2) {
+		if((side1+side3) <= side2) { // JA
 			return false;
 		}
-		if((side3+side2)>side1) {
+		if((side3+side2) <= side1) { // JA
 			return false;
 		}
 		return true;
