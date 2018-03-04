@@ -15,10 +15,10 @@ public class prb93 {
 		System.out.println(mydate.toString());
 		mydate.setTime(1000000000);
 		System.out.println(mydate.toString());
-//		mydate.setTime(10000000000);
-//		System.out.println(mydate.toString());
-//		mydate.setTime(100000000000);
-//		System.out.println(mydate.toString());
+		mydate.setTime(10000000000L);
+		System.out.println(mydate.toString());
+		mydate.setTime(100000000000L);
+		System.out.println(mydate.toString());
 	}
 
 }
