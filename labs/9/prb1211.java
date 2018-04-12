@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+// JA: This should write to the same file
 public class prb1211 {
 	public static void main(String[] args) throws Exception {
 		if (args.length !=2) {
