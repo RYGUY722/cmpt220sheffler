@@ -59,13 +59,13 @@ Ice Wraith
 A more formidable enemy, considering it just becomes mist on the occasion.
 100 20 15 10 15 15
 water
-He sends mist down your throat before freezing some of it.
+It sends mist down your throat before freezing some of it.
 magic
 12
 He shoots an ice shard at you, but it more or less bounces off.
 magic
 10
-He punches you with an icy fist.
+The wraith punches you with an icy fist.
 physical
 18
 He disappears and surprise attacks you from behind, using a sharp icicle.
@@ -74,3 +74,60 @@ physical
 He sends multiple needle-thin shards at you, etching into your skin.
 physical
 31
+Banshee
+The lost soul of a dead woman whose spirit cannot rest.
+120 50 30 20 50 90
+physical
+The Banshee scratches you
+physical
+0
+The Banshee screams at you
+magic
+0
+The Banshee slams into you
+physical
+0
+The Banshee form becomes slightly clearer as it heals itself.
+heal
+30
+The Banshee wails in pain. You wouldn't be surprised if the entire solar system heard.
+magic
+50
+Flesh Amalgamation
+A large mass of rotting human flesh. The accidental work of a novice necromancer.
+290 20 5 5 2 20
+almighty
+The Flesh Amalgamation whacks you.
+physical
+20
+The Flesh Amalgamation hurls a body at you.
+physical
+30
+The Flesh Amalgamation is moaning extremely loud.
+magic
+35
+A stray arm knocks you clean off your feet.
+physical
+60
+The Flesh Amalgamation is leaking a corrosive liqud that's pooling around your feet.
+magic
+80
+Lich King
+An undying remnant of a man, kept alive by dark magic.
+320 0 0 0 0 0
+almighty
+The Lich King Hits you with his greatsword.
+physical
+0
+The Lich King hurls a flaming skull at you.
+magic
+0
+The Lich King shield bashes You
+physical
+0
+The Lich King absorbs the souls of the dead around the area.
+heal
+60
+The Lich King slams you into a wall.
+physical
+95

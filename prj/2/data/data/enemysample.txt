@@ -4,7 +4,7 @@ HP Attack Defense Mental Speed Precision
 Element (null, fire, water, electric, almighty)
 Sample move text
 physical
-0
+Damage
 Sample move text
 physical
 6
@@ -18,5 +18,17 @@ Sample move text
 magic
 15
 
-README: The first 2 moves are the most common moves. The last move is the rarest, but will occur often while the enemy is low on health.
-Moves can either be physical, magic, or heal. The number under each move is the damage or heal amount. 
+README: 
+Stats: 
+HP - Health of the monster
+Attack - Physical attack power
+Defense - Physical resistance
+Mental - Magic power and resistance
+Speed - Speed of the enemy used to determine who will act first
+Precision - How accurate the enemy is. Lower means more missing attacks.
+Each listing is a move the enemy can use. Each enemy may have up to five. 
+The text ("Sample move text" here) will display when the move is used.
+Moves can either be physical, magic, or heal. 
+The number under each move is the damage or heal amount. 
+The first 2 moves are the most common moves. The last move is the rarest, but will occur often while the enemy is low on health.
+

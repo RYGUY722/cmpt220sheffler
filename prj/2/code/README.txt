@@ -2,6 +2,9 @@ BASIC NOTES:
 As discussed in the writeup, this game is a working RPG. That said, the game is theoretically infinitely long.
 Its length is only dependant on the number of enemies in enemy.txt. Adding more enemies and/or spells should be easy and is encouraged.
 
+Import the file code into Eclipse. Once this is completed, simply run MainRunner.java. 
+It is recommended to increase the size of your console, as the game outputs a lot of text.
+
 BATTLE SYSTEM NOTES:
 Commands are not case sensitive.
 Spells expend MP in exchange for enhanced damage.

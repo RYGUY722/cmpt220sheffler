@@ -126,6 +126,7 @@ public class Player extends GameEntity{
 		for(int x=0;x<spells.length;x++) {
 			System.out.println(spells[x][0]+":");
 			System.out.println("	"+spells[x][5]);
+			System.out.println("	MP Cost:"+(int)spells[x][2]);
 		}
 	}
 	public int getSpellNumber(String spellname) {

@@ -6,7 +6,19 @@ physical
 A strong blow to the enemy
 Ember
 1
-4
+5
 fire
 1.1
 A weak fire spell
+10 Watt
+2
+5
+electric
+1.1
+A tiny shock of electricity
+Ray of Light
+3
+6
+almighty
+1.2
+Casts a single shining ray of holy light
