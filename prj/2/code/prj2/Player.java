@@ -16,9 +16,9 @@ public class Player extends GameEntity{
 	Player(String name){
 		this.name=name;
 		level=1;
-		maxhealth=(int) (Math.random()*25+35);
+		maxhealth=(int) (Math.random()*20+30);
 		health=maxhealth;
-		maxmp=(int) (Math.random()*20+35);
+		maxmp=(int) (Math.random()*10+20);
 		mp=maxmp;
 		attack=(int) (Math.random()*20)+5;
 		defense=(int) (Math.random()*20)+5;
@@ -146,12 +146,12 @@ public class Player extends GameEntity{
 	//Battle
 	public void takeDamage(int damage, boolean isMagic) {
 		if(isMagic) {
-			health-=(damage*(100/(100-mental)));
-			System.out.println("You took "+(damage*(100/(100-mental)))+" damage!");
+			health-=Math.round(((double)damage*(100.0/(100.0+(double)mental))));
+			System.out.println("You took "+Math.round(((double)damage*(100.0/(100.0+(double)mental))))+" damage!");
 		}
 		else {
-			health-=(damage*(100/(100-defense)));
-			System.out.println("You took "+(damage*(100/(100-defense)))+" damage!");
+			health-=Math.round(((double)damage*(100.0/(100.0+(double)defense))));
+			System.out.println("You took "+Math.round(((double)damage*(100.0/(100.0+(double)defense))))+" damage!");
 		}
 	}
 	
@@ -177,11 +177,11 @@ public class Player extends GameEntity{
 		health=maxhealth;
 		maxmp+=(int) (Math.random()*2+2);
 		mp=maxmp;
-		attack+=(int) (Math.random()*20)+5;
-		defense+=(int) (Math.random()*20)+5;
-		mental+=(int) (Math.random()*20)+5;
-		speed+=(int) (Math.random()*20)+5;
-		precision+=(int) (Math.random()*20)+5;
+		attack+=(int) (Math.random()*5)+2;
+		defense+=(int) (Math.random()*4)+2;
+		mental+=(int) (Math.random()*4)+2;
+		speed+=(int) (Math.random()*6)+2;
+		precision+=(int) (Math.random()*4)+3;
 		 for(int z=0;z<allspells.length;z++) { //Learn all learnable spells
 	        	if((((Double) allspells[z][1]).intValue())<=level) { //If you're the level or higher
 	        		Object[][] temp = new Object[spells.length + 1][6];

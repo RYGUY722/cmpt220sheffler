@@ -53,22 +53,22 @@ public class Enemy extends GameEntity{
 	
 	public void takeDamage(int damage, String element) {
 		if(element.equals("physical")) {
-			health-=(damage*(100/(100+defense)));
-			System.out.println(name+" took "+(damage*(100/(100+defense)))+" damage.");
+			health-=Math.round(((double)damage*(100.0/(100.0+(double)defense))));
+			System.out.println(name+" took "+Math.round(((double)damage*(100.0/(100.0+(double)defense))))+" damage.");
 		}
 		else if(isWeak(element)) {
-			health-=(damage*(100/(40+mental)));
+			health-=Math.round(((double)damage*(100.0/(40.0+(double)mental))));
 			System.out.println(name+" was weak to "+element+"!");
-			System.out.println(name+" took a boosted "+(damage*(100/(40+mental)))+" damage!");
+			System.out.println(name+" took a boosted "+Math.round(((double)damage*(100.0/(40.0+(double)mental))))+" damage!");
 		}
 		else if(isStrong(element)) {
-			health-=(damage*(100/(175+mental)));
+			health-=Math.round(((double)damage*(100.0/(175.0+(double)mental))));
 			System.out.println(name+" was strong against "+element+"!");
-			System.out.println(name+" only took a reduced "+(damage*(100/(175+mental)))+" damage.");
+			System.out.println(name+" only took a reduced "+Math.round(((double)damage*(100.0/(175.0+(double)mental))))+" damage.");
 		}
 		else {
-			health-=(damage*(100/(100+mental)));
-			System.out.println(name+" took "+(damage*(100/(100+mental)))+" damage.");
+			health-=Math.round(((double)damage*(100.0/(100.0+(double)mental))));
+			System.out.println(name+" took "+(Math.round(((double)damage*(100.0/(100.0+(double)mental)))))+" damage.");
 		}
 	}
 	

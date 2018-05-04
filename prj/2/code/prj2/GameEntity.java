@@ -42,18 +42,18 @@ public class GameEntity {
 	public int calcDamage(boolean isMagic, boolean isCrit) {
 		if(isMagic) {
 			if(isCrit) {
-				return (int)(mental*1.5);
+				return (int) Math.round((mental*1.5));
 			}
 			else {
-				return (int)(mental*1.1);
+				return (int) Math.round((mental*1.1));
 			}
 		}
 		else {
 			if(isCrit) {
-				return (int)(attack*1.5);
+				return (int) Math.round((attack*1.5));
 			}
 			else {
-				return (int)(attack*1.1);
+				return (int) Math.round((attack*1.1));
 			}
 		}
 	}

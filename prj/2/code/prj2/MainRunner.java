@@ -31,7 +31,7 @@ public class MainRunner {
 			String choice=userin.nextLine().toLowerCase();
 			if(choice.equals("start")) {
 				System.out.print("Enter player name: ");
-				player=new Player(userin.next());
+				player=new Player(userin.nextLine());
 				complete=true;
 			}
 			else if(choice.equals("load")) {
