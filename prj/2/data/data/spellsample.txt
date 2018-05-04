@@ -1,0 +1,6 @@
+Spell
+Level learned
+Cost
+Element
+Dmg Multiplier
+Description

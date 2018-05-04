@@ -1,0 +1,38 @@
+Brittle Skeleton
+A skeletal warrior. Its bones aren't very thick, so they break pretty easily. To be honest, it's a bit of a joke to fight.
+40 10 10 10 10 10
+electric
+The skeleton's arm fell off. It's picking it up now.
+physical
+0
+The skeleton punches you weakly.
+physical
+6
+The skeleton hits you solidly.
+physical
+9
+The skeleton takes off an arm and throws it at you.
+physical
+10
+The Brittle Skeleton unleashes its strongest magic, sending a single ember drifting towards you.
+magic
+15
+Blobby Slime
+A common slime. Doesn't pose much threat, but can slowly suffocate you if you fall asleep.
+50 10 5 30 10 10
+null
+The slime flings a small piece of itself at you.
+physical
+7
+The slime whips you with a tendril, causing you to stumble back for a moment.
+physical
+6
+The slime forms into a fist and punches you while making a funny sound.
+physical
+14
+The slime extends a tendril, inspecting and testing you
+physical
+0
+The slime flings itself at you, knocking you to the ground
+physical
+20

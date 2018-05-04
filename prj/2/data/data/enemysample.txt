@@ -1,0 +1,22 @@
+Name
+Description
+HP Attack Defense Mental Speed Precision
+Element (null, fire, water, electric, almighty)
+Sample move text
+physical
+0
+Sample move text
+physical
+6
+Sample move text
+physical
+0
+Sample move text
+heal
+0
+Sample move text
+magic
+15
+
+README: The first 2 moves are the most common moves. The last move is the rarest, but will occur often while the enemy is low on health.
+Moves can either be physical, magic, or heal. The number under each move is the damage or heal amount. 
