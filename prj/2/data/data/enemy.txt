@@ -30,9 +30,47 @@ physical
 The slime forms into a fist and punches you while making a funny sound.
 physical
 14
-The slime extends a tendril, inspecting and testing you
+The slime extends a tendril, inspecting and testing you.
 physical
 0
-The slime flings itself at you, knocking you to the ground
+The slime flings itself at you, knocking you to the ground.
 physical
 20
+Zappy Scorpion
+Probably the largest arachnid you’ve ever seen. Shouldn’t be too hard to fight, just avoid its electrified stinger.
+50 10 10 10 15 8
+electric
+He stings you with the tip of his stinger.
+physical
+8
+It hits you right in the chest, but luckily doesn't break skin.
+physical
+9
+The scorpion tries to sting you but completely missed, flying right past you.
+physical
+0
+He stings you right in the chest. That’s gonna hurt later.
+physical
+19
+He unleashes a fully electrified stinger right into your head, making you go blind for a second.
+physical
+27
+Ice Wraith
+A more formidable enemy, considering it just becomes mist on the occasion.
+100 20 15 10 15 15
+water
+He sends mist down your throat before freezing some of it.
+magic
+12
+He shoots an ice shard at you, but it more or less bounces off.
+magic
+10
+He punches you with an icy fist.
+physical
+18
+He disappears and surprise attacks you from behind, using a sharp icicle.
+physical
+23
+He sends multiple needle-thin shards at you, etching into your skin.
+physical
+31

@@ -29,7 +29,7 @@ public class Player extends GameEntity{
 			getSpells();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ERROR: CORE FILES NOT FOUND (enemy.txt)");
+			JOptionPane.showMessageDialog(null, "ERROR: CORE FILES NOT FOUND (spells.txt)");
 			System.exit(0);
 		}
 		System.out.println("You cautiously open the door to the dungeon and step inside...");
@@ -51,13 +51,13 @@ public class Player extends GameEntity{
 			getSpells();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ERROR: CORE FILES NOT FOUND (enemy.txt)");
+			JOptionPane.showMessageDialog(null, "ERROR: CORE FILES NOT FOUND (spells.txt)");
 			System.exit(0);
 		}
 	}
 	
 	public void getSpells() throws FileNotFoundException {
-		Scanner spellin=new Scanner(new File("C:\\Users\\Ryan\\Desktop\\CMPT220L204\\prj2\\src\\prj2\\data\\spells.txt"));
+		Scanner spellin=new Scanner(new File("../data/data/spells.txt"));
 		while(spellin.hasNext()) {//Setup allspells
 			Object[][] temp = new Object[allspells.length + 1][6];
             for(int x=0;x<allspells.length;x++) {
@@ -129,7 +129,7 @@ public class Player extends GameEntity{
 		}
 	}
 	public int getSpellNumber(String spellname) {
-		int count=0;
+		int count=-1;
 		while(true) {
 			count++;
 			if(spellname.equals(((String) spells[count][0]).toLowerCase()))

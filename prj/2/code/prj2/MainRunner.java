@@ -28,22 +28,26 @@ public class MainRunner {
 		System.out.println("Would you like to start a new game or load one? (\"start\" or \"load\")"); 
 		boolean complete=false;
 		while(!complete) {
-			String choice=userin.next().toLowerCase();
+			String choice=userin.nextLine().toLowerCase();
 			if(choice.equals("start")) {
 				System.out.print("Enter player name: ");
 				player=new Player(userin.next());
-				enemy=new Enemy();
 				complete=true;
 			}
 			else if(choice.equals("load")) {
-				System.out.print("Enter player name: ");
-				load();
+				try {
+					load();
+				} catch (FileNotFoundException e) {
+					System.out.println("wow something didn't work, huh.");
+					e.printStackTrace();
+				}
 				complete=true;
 			}
 			else {
 				System.out.println("Please enter either \"start\" or \"load\"");
 			}
 		}
+		enemy=new Enemy(enemynum);
 		//userin.close();
 		System.out.println("A "+enemy.getName()+" approaches!");
 	}
@@ -101,6 +105,7 @@ public class MainRunner {
 	private static void playerStatus() {
 		System.out.println("-------------");
 		System.out.printf("|%11s|\n", player.getName());
+		System.out.printf("|Lv. %7d|\n", player.level);
 		System.out.println("-------------");
 		System.out.printf("|HP: %3d/%3d|\n", player.getHP(), player.getMaxHP());
 		System.out.printf("|MP: %3d/%3d|\n", player.getMP(), player.getMaxMP());
@@ -154,9 +159,7 @@ public class MainRunner {
 					System.out.println("But you missed!");
 		}
 		else { //If not attacking (and input is valid), it must be a spell
-			System.out.println("AAAAAAA");
 			int spellnum=player.getSpellNumber(act);
-			System.out.println("AAAAAAA");
 			System.out.println("You charge up, and cast "+player.getSpellName(spellnum)+"!");
 			if((Math.random()*(player.getPrecision()+(100/(100+player.getPrecision()))))<=(1.5*player.getPrecision())) //If the spell hits (spells are more likely to hit)
 				enemy.takeDamage(player.calcSpellDamage(spellnum), player.getSpellElement(spellnum));
@@ -191,7 +194,7 @@ public class MainRunner {
 	//Save/Load
 	
 	private static void save() throws FileNotFoundException {
-		File savefile=new File("src/prj2/saves"+player.getName()+".txt");
+		File savefile=new File("../data/saves/"+player.getName()+".txt");
 		try {
 			savefile.createNewFile();
 		} catch (IOException e) {
@@ -206,12 +209,42 @@ public class MainRunner {
 		saver.println(player.getMental());
 		saver.println(player.getSpeed());
 		saver.println(player.getPrecision());
-		saver.println(enemynum);
+		saver.println(enemynum+1);
 		saver.close();
 		System.out.println("Your game has been saved. It is safe to close the game, if you wish.");
 	}
-	private static void load() {
-		
+	private static void load() throws FileNotFoundException{
+		boolean hasLoaded=false;
+		while(!hasLoaded) {
+			System.out.println("Enter player name: ");
+			String name=userin.nextLine();
+			File savefile=new File("../data/saves/"+name+".txt");
+			if(savefile.exists()) {
+				Scanner filein=new Scanner(savefile);
+				int hp=filein.nextInt();
+				filein.nextLine();
+				int mp=filein.nextInt();
+				filein.nextLine();
+				int at=filein.nextInt();
+				filein.nextLine();
+				int def=filein.nextInt();
+				filein.nextLine();
+				int men=filein.nextInt();
+				filein.nextLine();
+				int sp=filein.nextInt();
+				filein.nextLine();
+				int pr=filein.nextInt();
+				filein.nextLine();
+				int lv=filein.nextInt();
+				enemynum=lv-1;
+				filein.close();
+				player=new Player(name,lv,hp,mp,at,def,men,sp,pr);
+				hasLoaded=true;
+			}
+			else {
+				System.out.println("File not found. Please try again.");
+			}
+		}
 	}
 
 }

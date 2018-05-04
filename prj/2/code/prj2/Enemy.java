@@ -18,7 +18,7 @@ public class Enemy extends GameEntity{
 	}
 	private void init(int enemynum) { //Fetches enemy stats
 		try {
-			Scanner enemyin=new Scanner(new File("src/prj2/data/enemy.txt"));
+			Scanner enemyin=new Scanner(new File("../data/data/enemy.txt"));
 			for(int x=0;x<=enemynum;x++) {
 				name=enemyin.nextLine();
 				description=enemyin.nextLine();
