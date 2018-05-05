@@ -197,7 +197,8 @@ public class Player extends GameEntity{
 	                    }
 	                }
 	                spells=temp.clone();
-	                spells[z]=allspells[z];
+	                spells[spells.length-1]=allspells[z];
+	                System.out.println("You learned "+(String)spells[spells.length-1]+"!");
 	        	}
 	        }
 	}

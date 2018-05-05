@@ -1,6 +1,10 @@
-Spell
+Spell Name
 Level learned
-Cost
+MP Cost
 Element
-Dmg Multiplier
+Damage Multiplier
 Description
+
+README: Available spells are updated every time the game is started, unlike enemies (which are continually scanned).
+Spells do not need to be in any order. A spell learned at level 7 may be before a spell learned at level 5.
+Description is purely aesthetic.

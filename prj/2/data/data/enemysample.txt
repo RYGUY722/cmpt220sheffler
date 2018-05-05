@@ -2,19 +2,19 @@ Name
 Description
 HP Attack Defense Mental Speed Precision
 Element (null, fire, water, electric, almighty)
-Sample move text
+Sample Common Move text
 physical
 Damage
-Sample move text
+Sample Common Move text
 physical
 6
-Sample move text
+Sample Uncommon Move text
 physical
 0
-Sample move text
+Sample Uncommon Move text
 heal
 0
-Sample move text
+Sample Desperation Move text
 magic
 15
 

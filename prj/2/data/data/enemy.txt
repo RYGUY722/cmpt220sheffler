@@ -74,25 +74,63 @@ physical
 He sends multiple needle-thin shards at you, etching into your skin.
 physical
 31
+Brainwashed Warrior
+Likely the last human warrior to travel in this dungeon. Under the influence of mind-altering magic, making him hostile.
+98 65 50 20 40 20
+null
+The Brainwashed Warrior hits you with the hilt of his sword.
+physical
+11
+He slashes you with his sword, striking your armor.
+physical
+16
+He slashes you with his sword, striking flesh.
+physical
+27
+The warrior stares you down with ever-increasing fervor.
+heal
+24
+The Brainwashed Warrior attempts to plunge his blade into your heart, but misses it.
+physical
+56
 Banshee
-The lost soul of a dead woman whose spirit cannot rest.
+The lost soul of a long dead woman whose spirit cannot rest.
 120 50 30 20 50 90
+almighty
+The Banshee scratches your leg
 physical
-The Banshee scratches you
-physical
-0
+20
 The Banshee screams at you
 magic
-0
-The Banshee slams into you
-physical
-0
-The Banshee form becomes slightly clearer as it heals itself.
+23
+The Banshee passes through you, leaving you with intense chills.
+magic
+36
+The Banshee's form becomes slightly clearer as it heals itself.
 heal
 30
 The Banshee wails in pain. You wouldn't be surprised if the entire solar system heard.
 magic
-50
+58
+Blindfolded Demon
+Description
+HP Attack Defense Mental Speed Precision
+Element (null, fire, water, electric, almighty)
+Sample move text
+physical
+Damage
+Sample move text
+physical
+6
+Sample move text
+physical
+0
+Sample move text
+heal
+0
+Sample move text
+magic
+15
 Flesh Amalgamation
 A large mass of rotting human flesh. The accidental work of a novice necromancer.
 290 20 5 5 2 20
@@ -114,20 +152,20 @@ magic
 80
 Lich King
 An undying remnant of a man, kept alive by dark magic.
-320 0 0 0 0 0
+320 100 0 70 36 110
 almighty
-The Lich King Hits you with his greatsword.
+The Lich King strikes you with his greatsword.
 physical
-0
-The Lich King hurls a flaming skull at you.
+40
+The Lich King delivers a punch straight to your head.
+physical
+45
+The Lich King hurls a fireball accompanied with the apparition of a skull at you.
 magic
-0
-The Lich King shield bashes You
-physical
-0
-The Lich King absorbs the souls of the dead around the area.
+70
+The Lich King calls in the souls of the dead around the area.
 heal
 60
 The Lich King slams you into a wall.
 physical
-95
+105
