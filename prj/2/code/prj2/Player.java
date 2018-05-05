@@ -126,7 +126,7 @@ public class Player extends GameEntity{
 		for(int x=0;x<spells.length;x++) {
 			System.out.println(spells[x][0]+":");
 			System.out.println("	"+spells[x][5]);
-			System.out.println("	MP Cost:"+(int)spells[x][2]);
+			System.out.println("	MP Cost:"+spells[x][2]);
 		}
 	}
 	public int getSpellNumber(String spellname) {
@@ -146,7 +146,11 @@ public class Player extends GameEntity{
 	
 	//Battle
 	public void takeDamage(int damage, boolean isMagic) {
-		if(isMagic) {
+		if(damage<0) {
+			health-=damage;
+			System.out.println("You healed yourself for "+-damage+" health!");
+		}
+		else if(isMagic) {
 			health-=Math.round(((double)damage*(100.0/(100.0+(double)mental))));
 			System.out.println("You took "+Math.round(((double)damage*(100.0/(100.0+(double)mental))))+" damage!");
 		}
@@ -160,6 +164,7 @@ public class Player extends GameEntity{
 		mp-=(Double)spells[spellnum][2];
 		if(spells[spellnum][3].equals("heal")) { //If it's a healing spell
 			health+=(int) (mental*((Double)spells[spellnum][4]))/2;
+			System.out.println("You healed yourself for "+(int) (mental*((Double)spells[spellnum][4]))/2+" health!");
 			return 0;
 		}
 		else if(spells[spellnum][3].equals("physical")) { //If it's a physical skill

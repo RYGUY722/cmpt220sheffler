@@ -52,7 +52,11 @@ public class Enemy extends GameEntity{
 	//Battle
 	
 	public void takeDamage(int damage, String element) {
-		if(element.equals("physical")) {
+		if(damage<0) {
+			health-=damage;
+			System.out.println(name+" healed itself for "+-damage+" health!");
+		}
+		else if(element.equals("physical")) {
 			health-=Math.round(((double)damage*(100.0/(100.0+(double)defense))));
 			System.out.println(name+" took "+Math.round(((double)damage*(100.0/(100.0+(double)defense))))+" damage.");
 		}
