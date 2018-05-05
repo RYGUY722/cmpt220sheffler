@@ -189,7 +189,14 @@ public class Player extends GameEntity{
 		speed+=(int) (Math.random()*6)+2;
 		precision+=(int) (Math.random()*4)+3;
 		 for(int z=0;z<allspells.length;z++) { //Learn all learnable spells
-	        	if((((Double) allspells[z][1]).intValue())<=level) { //If you're the level or higher
+	        	learn:if(((((Double) allspells[z][1]).intValue())<=level)) { //If you're the level or higher
+	        		
+	        		for(int a=0;a<spells.length;a++){ //And you don't know the spell
+	        			if(allspells[z][0].equals(spells[a][0])) {
+	        				z++;
+	        				break learn;
+	        			}
+	        		} 
 	        		Object[][] temp = new Object[spells.length + 1][6];
 	                for(int x=0;x<spells.length;x++) {
 	                    for(int y=0;y<6;y++) {
@@ -198,7 +205,7 @@ public class Player extends GameEntity{
 	                }
 	                spells=temp.clone();
 	                spells[spells.length-1]=allspells[z];
-	                System.out.println("You learned "+(String)spells[spells.length-1]+"!");
+	                System.out.println("You learned "+spells[spells.length-1][0]+"!");
 	        	}
 	        }
 	}
